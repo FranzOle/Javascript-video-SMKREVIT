@@ -1,36 +1,64 @@
-//Tipe Data Javascript
+//Operator Matematika
 
-let angka = 5; //Tipe data number
-let angkaDesimal = 2.5; //Tipe data number float/double
-let kalimat = " sedang belajar Javascript"; //tipe data String
-let nama = "Johnny";
-console.log(nama+kalimat);
+//operator unary
+let x = 12;
+x = -x; //menghasilkan angka -12
+console.log(x);
 
-console.log(angka);
-console.log(typeof angka); //Menampilkan tipe dari variabel 'angka'
+//operator binary
+let y = 2;
+let z = 1;
+console.log(y-z); //Operator binary Membutuhkan 2 atau lebih operand
 
-//Tipe data special number
-let tipeDataInft = 1 / 0; //menghasilkan infinity
-console.log(tipeDataInft);
-let tipeDataNaN = "membagi dengan"/ 5; //'NaN merepresentasikan error dari operasi Matematika
-console.log(tipeDataNaN);
+//Operator aritmatika
+console.log(2+2); //Pertambahan
+console.log(3-2); //Pengurangan
+console.log(3*2); //Perkalian
+console.log(4/2); //Pembagian
+console.log(5%2); //Modulo. Modulo adalah hasil sisa dari pembagian integer
+console.log(2**3); //Eksponen atau kuadrat disitu 2 dikuadratkan 3
 
-//Tipe-tipe dalam string dan penggunaanya
-let kata = "Selamat Datang "; //String biasa
-let kataNama = 'Pace'; //String dengan tanda petik satu di bahasa pemrograman lain biasanya ini disebut tipe data char
-let EmbedKata =`Halo ${kataNama} ${kata}`; //penggunaan tanda backstick dan dollar membuat metode ini lebih fleksibel
-console.log(EmbedKata);
+//Mencoba rumus
+let p = 2,
+l = 3,
+t = 7,volB; //variabel untuk menghitung volume balok
+volB = p * l * t;
+console.log(volB);
 
-//Tipe data boolean
-let benar = true; //menghasilkan kondisi true dan diperlukan dalam pengecekan if atau flow apapun
-let salah = 4 > 5; //menghasilkan kondisi false karna 4 tidak lebih besar dari 5
-console.log(benar);
-console.log(salah);
+let a = 2,
+ tS = 6,
+ luasSegitiga;
+luasSegitiga = (1/2) * a * tS;
+console.log(luasSegitiga); //Luas Segitiga
 
-//Tipe data Null
-let tipeDataNull = null; // menghasilkan nilai kosong atau void 
-console.log(tipeDataNull);
+//Operator string 
+let pace = "OPM";
+let indo = "Indonesia";
+console.log(pace + " Love " + indo);
 
-//variabel undefined
-let variabelUndefined;
-console.log(variabelUndefined); //tidak akan tampil atau undefined karna belum diisi
+//angka string dsb
+console.log('1' + 2); //akan menghasilkan 12 bukan 3 karna 1 adalah string
+console.log(3 + 3 + '2'); //akan menghasilkan 62;
+console.log('1' + 2 + 3); //akan menghasilkan 123 karna operand pertama adalah string
+console.log(5 - "2"); //akan menghasilkan 3 karna 2 akan dikonversi otomatis
+console.log(10 / "2"); //sama operand 2 akan dikonversi sehingga hasil = 5
+
+//operator precendance 
+console.log(2 + 2 * 3); //8 karna pekalian diutamakam
+console.log((2 + 2) * 3); //12 karna tanda kurung lebih diutamakan
+
+//assigment
+let var1 =5;
+let var2 = 7;
+var2 = var1; //menghasilkan 5
+var1 = var2; //tetap 5 karna b sudah di asign
+
+//increment dan decrement
+let inc = 1;
+console.log(inc++); //HVsil =2
+let inc2 = 1;
+inc2 = inc2 +1; //Logikanya
+
+let dec = 2;
+console.log(dec--); //Hasil = 1
+
