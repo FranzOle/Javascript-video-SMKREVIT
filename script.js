@@ -1,33 +1,34 @@
-//Percabangan 
-//Switch Case adalah  struktur kontrol dalam pemrograman yang digunakan untuk memilih dan menjalankan blok kode tertentu berdasarkan nilai ekspresi atau variabel.
-//Switch case memainkan logika OR
-let hari;
-let namaHari = "";
-hari = 5; //akan dijalankan jumat
-switch (hari) {
-    case 1: //case adalah bagian untuk mendefinisikan suatu nilai atau kondisi
-        namaHari = "Senin";
-        break; //break digunakan untuk menghentikan suatu blok kode di suatu case
-    case 2:
-        namaHari = "Selasa";
-        break;
-    case 3:
-        namaHari = "Rabu";
-        break;
-    case 4:
-        namaHari = "Kamis";
-        break;
-    case 5:
-        namaHari = "Jumat";
-        break;
-    case 6:
-        namaHari = "Sabtu";
-        break;
-    case 7:
-        namaHari = "Minggu";
-        break;
-    default: //default digunakan untuk kode default jika suatu nilai tidak memenuhi semua kondisi diatas
-        namaHari = "Tidak Valid";
-        break;
+//Perulangan / Looping
+//Perulangan digunakan ketika kita ingin mengulang suatu blok kode
+
+//loop ada 3 yaitu while-do, for, dan do-while
+
+//looping while-do
+let i =1;
+while(i <= 10){
+    console.log(i);
+    i++;
 }
 
+//do-while. do-while yang dieksekusi adalah blok kode yg kita buat sebelum loop
+let start = 0;
+let finish = 10;
+do{
+    console.log("*" + "\n");
+    start++;
+}while(start < finish);
+
+//for. for digunakan jika kita sudah mendefinisikan batas loop yg kita buat.
+for(let mulai = 1; mulai < 10; mulai++){
+    console.log("Halo Javascript");
+}
+
+//contoh penggunaan
+let segitiga = '';
+    for (let a = 0; a < 5; a++) {
+        for (let b = a; b < 5; b++) {
+            segitiga += '* ';
+        }
+        segitiga += '<br>';
+    }
+document.getElementById('loop').innerHTML = segitiga;
