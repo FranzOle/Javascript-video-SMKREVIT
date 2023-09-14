@@ -1,28 +1,34 @@
-//Operator Logika
+//Percabangan 
+//percabangan if adalah dimana suatu kondisi bernilai true suatu blok kode akan dikerjakan
 
-//inisialisasi
-let a = true;
-let b = false;
-let c = true;
-let d = false;
+if(true){
+    console.log("Kode ini dijalankan karna nilai benar"); //kode ini dijalankan saat kondisinya true
+}
+else{
+    console.log("Kode ini tidak akan dijalankan");
+}
 
-//operator OR '||' jika salah satu bernilai true maka hasilnya adalah true
-console.log(a || b); //menghasilkan true karna salah satu bernilai true
-console.log(a || c); //menghasilkan false
+//contoh kode penggunaan if else
+let nilai;
+const kkm = 85; //variabel batas nilai
+nilai = 95; //nilai diinisiasi
+if(nilai =>0 && nilai <=100){
+    if (nilai >=kkm) {
+        console.log("anda lulus");
+    }
+    else{
+        console.log("tidak lulus");
+    }
+}
+else{
+    console.log("nilai anda tidak valid");
+}
 
-//operat VND '&&' jika semua operand true maka hasilnya true
-console.log(a && c); //menghasilkan true
-console.log(a && b); //menghasilkan false karna salah satu operand bernilai false
+//contoh menggunakan percabangan if dengan menghitung bilangan genap
+let bil = 18;
+if(bil % 2 == 0){
+    console.log("Bilangan genap");
+} else{
+    console.log("Bilangan ganjil");
+}
 
-//Operator Pembanding 
-let x = 1;
-let y = 2;
-console.log(x>y); //operator lebih besar tapi ini false
-console.log(x<y); //operator lebih kecil
-console.log(x<=y); //operator lebih kecil sama dengan
-console.log(x>=y); //operator lebih besar sama dengan
-
- let i = "5";
- let j = 5;
- console.log(i == j); //operator sama dengan hasilnya true
- console.log(i === j); //false meskipun nilai sama tapi pengecekan ini juga sampai tipe data
