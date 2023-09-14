@@ -1,34 +1,33 @@
 //Percabangan 
-//percabangan if adalah dimana suatu kondisi bernilai true suatu blok kode akan dikerjakan
-
-if(true){
-    console.log("Kode ini dijalankan karna nilai benar"); //kode ini dijalankan saat kondisinya true
-}
-else{
-    console.log("Kode ini tidak akan dijalankan");
-}
-
-//contoh kode penggunaan if else
-let nilai;
-const kkm = 85; //variabel batas nilai
-nilai = 95; //nilai diinisiasi
-if(nilai =>0 && nilai <=100){
-    if (nilai >=kkm) {
-        console.log("anda lulus");
-    }
-    else{
-        console.log("tidak lulus");
-    }
-}
-else{
-    console.log("nilai anda tidak valid");
-}
-
-//contoh menggunakan percabangan if dengan menghitung bilangan genap
-let bil = 18;
-if(bil % 2 == 0){
-    console.log("Bilangan genap");
-} else{
-    console.log("Bilangan ganjil");
+//Switch Case adalah  struktur kontrol dalam pemrograman yang digunakan untuk memilih dan menjalankan blok kode tertentu berdasarkan nilai ekspresi atau variabel.
+//Switch case memainkan logika OR
+let hari;
+let namaHari = "";
+hari = 5; //akan dijalankan jumat
+switch (hari) {
+    case 1: //case adalah bagian untuk mendefinisikan suatu nilai atau kondisi
+        namaHari = "Senin";
+        break; //break digunakan untuk menghentikan suatu blok kode di suatu case
+    case 2:
+        namaHari = "Selasa";
+        break;
+    case 3:
+        namaHari = "Rabu";
+        break;
+    case 4:
+        namaHari = "Kamis";
+        break;
+    case 5:
+        namaHari = "Jumat";
+        break;
+    case 6:
+        namaHari = "Sabtu";
+        break;
+    case 7:
+        namaHari = "Minggu";
+        break;
+    default: //default digunakan untuk kode default jika suatu nilai tidak memenuhi semua kondisi diatas
+        namaHari = "Tidak Valid";
+        break;
 }
 
