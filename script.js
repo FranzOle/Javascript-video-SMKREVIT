@@ -1,34 +1,39 @@
-//Perulangan / Looping
-//Perulangan digunakan ketika kita ingin mengulang suatu blok kode
-
-//loop ada 3 yaitu while-do, for, dan do-while
-
-//looping while-do
-let i =1;
-while(i <= 10){
-    console.log(i);
-    i++;
+// fungsi / function
+//sintaks fungsi javascript
+function Fungsi(){
+    return "Halo Javasript";
 }
+console.log(Fungsi());
 
-//do-while. do-while yang dieksekusi adalah blok kode yg kita buat sebelum loop
-let start = 0;
-let finish = 10;
-do{
-    console.log("*" + "\n");
-    start++;
-}while(start < finish);
-
-//for. for digunakan jika kita sudah mendefinisikan batas loop yg kita buat.
-for(let mulai = 1; mulai < 10; mulai++){
-    console.log("Halo Javascript");
+//Fungsi dengan parameter
+function Perkalian(a, b){
+    return a*b;
 }
+console.log(Perkalian(2,3)); 
 
-//contoh penggunaan
-let segitiga = '';
-    for (let a = 0; a < 5; a++) {
-        for (let b = a; b < 5; b++) {
-            segitiga += '* ';
-        }
-        segitiga += '<br>';
+//Fungsi tanpa nilai kembalian atau return value
+function Output(nama){
+    console.log("Halo " + nama);
+}
+Output("Lionel");
+
+//fungsi menghitung luas
+function LuasLingkaran(jari_jari){
+    let phi;
+    if(jari_jari%7 == 0){
+        phi = 22/7;
+    } else{
+        phi = 3.14;
     }
-document.getElementById('loop').innerHTML = segitiga;
+    return phi*jari_jari*jari_jari
+} 
+console.log(LuasLingkaran(7));
+const tTabung = 10;
+let volumeTabung = LuasLingkaran(7) * tTabung;
+console.log("Volume Tabung = " + volumeTabung);
+function VolumeBalok(panjang,lebar,tinggi){
+    const luas = panjang * lebar * tinggi;
+    return luas;
+}
+let p = 12, l = 10, t = 20;
+console.log("Volume balok adalah : " + VolumeBalok(p,l,t));
