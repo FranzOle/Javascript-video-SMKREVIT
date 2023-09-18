@@ -1,39 +1,45 @@
-// fungsi / function
-//sintaks fungsi javascript
-function Fungsi(){
-    return "Halo Javasript";
-}
-console.log(Fungsi());
+// arrow function javascript
+let fungsi = function(parameter){
+    console.log("Halo " + parameter);
+};
+fungsi("Johnny");
 
-//Fungsi dengan parameter
-function Perkalian(a, b){
-    return a*b;
-}
-console.log(Perkalian(2,3)); 
+//sintaks lebih pendek : 
+let tambah = (angka1, angka2) => angka1 + angka2;
+console.log(tambah(1, 2));
 
-//Fungsi tanpa nilai kembalian atau return value
-function Output(nama){
-    console.log("Halo " + nama);
-}
-Output("Lionel");
+let fungsiNama = (nama) => {
+    console.log("Hai Selamat datang " + nama);
+ };
+ nama1 = "Lionel";
+ nama2 = "Nando";
+ fungsiNama(nama1);
+ fungsiNama(nama2);
 
-//fungsi menghitung luas
-function LuasLingkaran(jari_jari){
-    let phi;
-    if(jari_jari%7 == 0){
-        phi = 22/7;
-    } else{
-        phi = 3.14;
-    }
-    return phi*jari_jari*jari_jari
-} 
-console.log(LuasLingkaran(7));
-const tTabung = 10;
-let volumeTabung = LuasLingkaran(7) * tTabung;
-console.log("Volume Tabung = " + volumeTabung);
-function VolumeBalok(panjang,lebar,tinggi){
-    const luas = panjang * lebar * tinggi;
-    return luas;
-}
-let p = 12, l = 10, t = 20;
-console.log("Volume balok adalah : " + VolumeBalok(p,l,t));
+ //Sintaks tanpa parameter 
+ let HelloScript = () => console.log("Hello World :)");
+HelloScript();
+
+//Multiline
+let PyScript = () =>{
+    console.log("Halo ini adalah Java \n");
+    console.log("Halo Ini adalah Python");
+};
+PyScript();
+
+//arrow function untuk menghitung luas
+let luasSegitiga = (alas, tinggi) =>{
+    return 1/2 * alas * tinggi;
+};
+console.log(luasSegitiga(10, 5));
+
+//percabangan dengan arrow function
+let nilai = 80;
+let percabangan = nilai >= 80 ? () => ("LULUS") : () => ("gagal");
+console.log(percabangan());
+
+let percabangan2 = (nilai == 80) ?
+    () => (console.log("Nilai sama")) :
+    () => (console.log("Nilai tidak sama"));
+
+percabangan2();
