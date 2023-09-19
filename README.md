@@ -1,2 +1,2 @@
 # Javascript-video-SMKREVIT
-JS Video Lionel Jevon C.P XI RPL
+JS 40 Video Lionel Jevon C.P XI RPL
