@@ -1,45 +1,35 @@
-// arrow function javascript
-let fungsi = function(parameter){
-    console.log("Halo " + parameter);
-};
-fungsi("Johnny");
+//array
+//array adalah sebuah varabel yang berisi banyak value
+let siswa = ["Moreno","Lionel","Tegar"];
+//menampilkan indeks array
+console.log(siswa[0]);
+console.log(siswa[1]);
+console.log(siswa[2]);
+//Panjang array mennggunakan length
+console.log(siswa.length);
+//menampilkan array
+console.log(siswa);
+//menampilkan array dengan loop
+for(let i = 0; i < 3; i++){ //inisiasi dengan 0 karna indeks dimulai dari 0
+    console.log(siswa[i]);
+}
+//bisa juga seperti ini 
+for(let i in siswa){
+    console.log(i);
+    console.log(siswa[i]);
+}
+//array dengan banyak tipe data
+fungsi = () => "Fungsi arrow";
+function Lionel(){
+    return "Halo Lionel";
+}
+let arr = ["String",fungsi(),234,'Lol',12.5,Lionel()];
+console.log(arr);
+console.log(arr[1]);
 
-//sintaks lebih pendek : 
-let tambah = (angka1, angka2) => angka1 + angka2;
-console.log(tambah(1, 2));
-
-let fungsiNama = (nama) => {
-    console.log("Hai Selamat datang " + nama);
- };
- nama1 = "Lionel";
- nama2 = "Nando";
- fungsiNama(nama1);
- fungsiNama(nama2);
-
- //Sintaks tanpa parameter 
- let HelloScript = () => console.log("Hello World :)");
-HelloScript();
-
-//Multiline
-let PyScript = () =>{
-    console.log("Halo ini adalah Java \n");
-    console.log("Halo Ini adalah Python");
-};
-PyScript();
-
-//arrow function untuk menghitung luas
-let luasSegitiga = (alas, tinggi) =>{
-    return 1/2 * alas * tinggi;
-};
-console.log(luasSegitiga(10, 5));
-
-//percabangan dengan arrow function
-let nilai = 80;
-let percabangan = nilai >= 80 ? () => ("LULUS") : () => ("gagal");
-console.log(percabangan());
-
-let percabangan2 = (nilai == 80) ?
-    () => (console.log("Nilai sama")) :
-    () => (console.log("Nilai tidak sama"));
-
-percabangan2();
+//Contoh operasi array
+let v1 = [1,2,3];
+let v2 = [4,5,6];
+for(let i =0; i<v2.length; i++){
+    console.log(v1[i]+v2[i]);
+}
