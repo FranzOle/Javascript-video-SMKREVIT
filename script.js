@@ -1,35 +1,43 @@
-//array
-//array adalah sebuah varabel yang berisi banyak value
-let siswa = ["Moreno","Lionel","Tegar"];
-//menampilkan indeks array
-console.log(siswa[0]);
-console.log(siswa[1]);
-console.log(siswa[2]);
-//Panjang array mennggunakan length
-console.log(siswa.length);
-//menampilkan array
-console.log(siswa);
-//menampilkan array dengan loop
-for(let i = 0; i < 3; i++){ //inisiasi dengan 0 karna indeks dimulai dari 0
-    console.log(siswa[i]);
-}
-//bisa juga seperti ini 
-for(let i in siswa){
-    console.log(i);
-    console.log(siswa[i]);
-}
-//array dengan banyak tipe data
-fungsi = () => "Fungsi arrow";
-function Lionel(){
-    return "Halo Lionel";
-}
-let arr = ["String",fungsi(),234,'Lol',12.5,Lionel()];
-console.log(arr);
-console.log(arr[1]);
+//Objek. objek adalah suatu penamaan untuk membuat variabel lebih fleksibel
+//Objek di javascript memiliki kemiripan konsep dengan oop 
+//Objek di js mirip seperti class dengan kita dapat menentukan atribut dan fungsi kita sendiri
+let objek = {
+    nama : "revit",
+    umur : 1,
+    nilai : ["TM","MT"],
+    status : true,
+    fungsi : function(){
+        return "SMK Revit bisa";
+    }
+};
+//menampilkan objek secara keseluruhan
+console.log(objek);
+//mengakses atribut objek
+console.log(objek.nama);
+console.log(objek.umur);
+//mengakses fungsi dan array dari objek
+console.log(objek.nilai[0]);
+console.log(objek.fungsi());
 
-//Contoh operasi array
-let v1 = [1,2,3];
-let v2 = [4,5,6];
-for(let i =0; i<v2.length; i++){
-    console.log(v1[i]+v2[i]);
-}
+//Praktik objek sama seperti kita mempraktikan di oop 
+let manusia = {
+    nama: "Lionel",
+    umur: 16,
+    kondisi: function () {
+        return "Sedih";
+    },
+    hidup: true,
+    makanan: ["Bakso", "Mie ayam"],
+    "nomor-telepon": "08123456789",
+    "alamat rumah": "damarsi",
+};
+
+console.log("Makanan hari ini adalah " + manusia.makanan[1]);
+console.log("Nomor Telepon: " + manusia["nomor-telepon"]);
+console.log("Rumahku ada di " + manusia["alamat rumah"]);
+
+// menggunakan method getter
+let identitas = manusia.nama;
+let hati = manusia.kondisi();
+console.log(identitas);
+console.log(hati);
