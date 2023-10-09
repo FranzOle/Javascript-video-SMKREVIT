@@ -8,6 +8,11 @@
     <style>
         body{
             margin: 0;
+            font-family:sans-serif;
+        }
+        .container2{
+            display:flex;
+            gap: 3px;
         }
     </style>
 </head>
@@ -20,6 +25,21 @@
             <h1 id="judulkonten"></h1>
             <p id="isikonten"></p>
         </div>
+        <hr>
+        <div class="container-event">
+            <h3>Event Dalam javascript</h3>
+            <div class="container2">
+            <h1 onclick="TesMetode()">Klik aku</h1>
+            <h1 id="klik">Klik id</h1>
+            <h1 id="klikk">Klik Listener</h1>
+            </div>
+            <p id="berubah"></p>    
+            <p id="berubahid"></p>    
+            <p id="berubahlistener"></p>    
+            <p onclick ="tampil()" id="rubah">Klik aku</p>
+            <p onmouseover="tampil2()" id="rubah2">Mouse over aku</p>
+        </div>
+
     </div>
 </body>
 </html>
