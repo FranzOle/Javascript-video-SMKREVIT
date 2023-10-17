@@ -30,7 +30,7 @@ function def (){
 
 function tampil (){
     let objfun = document.querySelector("#rubah");
-    objfun.innerText = "Lol"
+    objfun.innerText += "Lol"
 }
 
 function tampil2(){
@@ -43,3 +43,37 @@ function Fungsievent (p){
     let a = document.querySelector("#rubah3").innerText = "Belajar JS " + p;
     console.log("Tes");
 }
+
+//video 15 EventListener
+
+const kiklik = document.querySelector("#klikaku");
+const mouse = document.querySelector("#mouseaku");
+
+mouse.addEventListener("mouseover",MouseAku); //menggunakan metode mouseover
+mouse.addEventListener("mouseout", function (){
+    const div = document.querySelector(".container-listener");
+    div.innerHTML += "P ";
+}); //langsung memanggil function
+
+function MouseAku(){
+    const div = document.querySelector(".container-listener");
+    div.innerHTML += "Hi ";
+}
+
+kiklik.addEventListener("click",python);
+
+function python(){
+    const div = document.querySelector(".container-listener");
+    div.innerHTML = "Hi klik";
+}
+
+coba.onclick = python;  
+coba.onmouseover = function(){
+    let coba = document.querySelector("#coba");
+    coba.style.color = "red";
+};
+
+coba.onmouseout = function(){
+    let coba = document.querySelector("#coba");
+    coba.style.color = "black";
+};
