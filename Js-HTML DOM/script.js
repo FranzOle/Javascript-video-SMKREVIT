@@ -6,7 +6,7 @@ document.getElementById("target2").innerText ="lorem ipsum dolor mit";
 document.querySelector("h1").innerText = "Query";
 document.querySelector("#isikonten").innerText = "Isi konten dari container";
 
-//Event Dom js 
+//Video 14 Event Dom js 
 //metode 1 menggunakan onclick di elemen HTML 
 function TesMetode(){
     document.querySelector("#berubah").innerText = "Berubah";
@@ -68,6 +68,7 @@ function python(){
 }
 
 coba.onclick = python;  
+
 coba.onmouseover = function(){
     let coba = document.querySelector("#coba");
     coba.style.color = "red";

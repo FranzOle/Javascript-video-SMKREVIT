@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Naik Turun</title>
+        <script src="script.js" async defer></script>
+        <style> body{
+            font-family: monospace;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #naik{
+            box-shadow:inset 0px 1px 0px 0px #9fb4f2;
+            background-color:#7892c2;
+            border-radius:6px;
+            border:1px solid #ffffff;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #283966
+        }
+
+        #turun{
+            box-shadow:inset 0px 1px 0px 0px #9fb4f2;
+            background-color:#d31b1b;
+            border-radius:6px;
+            border:1px solid #ffffff;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #283966
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Projek counter UP DOWN</h1>
+            <button type="button" id="naik">Naik</button>
+        <h1 id="tampil">0</h1>
+        <button type="button" id="turun">Turun</button>
+        </div>
+    </body>
+</html>
