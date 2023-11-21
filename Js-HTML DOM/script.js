@@ -1,4 +1,4 @@
-//Video 20 array methods concat forEach dan filter
+//Video 21 array methods map, sort, dan reduce
 let p = document.querySelectorAll("p");
 let nilai =[
     {nama:"reno", ipa:90, ips:80, rpl:90},
@@ -37,14 +37,34 @@ nama.forEach(function(a){
     p[3].innerHTML += " " + a;
 }); 
 
-nama.forEach((a) => {
-    p[4].innerHTML += " " + a;
+// nama.forEach((a) => {
+//     p[4].innerHTML += " " + a;
+// });
+
+// nilai.filter(function (a) {
+//     if (a.ipa > 80) {
+//         console.log(a);
+//     }
+// });
+
+// nilai.filter((a)=> (a.ipa > 80 && a.rpl > 80 ? console.log(a.nama) : null));
+
+let siswa = nilai.map(function (a) {
+    return a.nama;
 });
 
-nilai.filter(function (a) {
-    if (a.ipa > 80) {
-        console.log(a);
-    }
-});
+// let siswa = nilai.map((a)=>[a.nama, a.ipa, a.ips]);
 
-nilai.filter((a)=> (a.ipa > 80 && a.rpl > 80 ? console.log(a.nama) : null));
+console.log(siswa);
+
+mapel.sort();
+
+console.log(mapel);
+
+// let hasil= nilai.reduce(function (a,b) {
+//    return(a = a + b.ipa); 
+// },0);
+
+let hasil =  nilai.reduce((a,b)=> (a+= b.ips),0);
+
+console.log(hasil);
