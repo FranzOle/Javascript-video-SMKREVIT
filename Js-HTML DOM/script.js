@@ -1,70 +1,13 @@
-//Video 21 array methods map, sort, dan reduce
+//Video 25 Local Storage
 let p = document.querySelectorAll("p");
-let nilai =[
-    {nama:"reno", ipa:90, ips:80, rpl:90},
-    {nama:"bondi", ipa:30, ips:70, rpl:60},
-    {nama:"budi", ipa:92, ips:84, rpl:95},
-    {nama:"doni", ipa:95, ips:80, rpl:100},
-]
+localStorage.setItem("coba",100);
+localStorage.setItem("tes","saya belajar javascript");
+// localStorage.removeItem("coba");
+//  localStorage.clear();
 
-let nama = ["reno","bondi","budi", "doni" ];
+p[0].innerHTML = localStorage.getItem("coba");
+p[1].innerHTML = localStorage.getItem("tes");
+p[2].innerHTML = "Panjang Storage = " + localStorage.length;
 
-// console.log(nilai);
-// console.log(nama);
-// console.log(nilai[0].nama);
-// nama.push("rudi");
-// nama.push("leni"); //berfungsi menambahkan data setelah data terakhir
-// // delete nama[0]; //berfungsi untuk menghapus data array sesuai index
-// // nama.splice(1,1);
-// nama.unshift("tejo", "boni"); //menambahkan elemen diawal
-p[0].innerHTML = nama;
-// p.innerHTML = nilai[0].nama;
-// p.innerHTML += " " + nilai[0].ipa;
-// p.innerHTML = nama.pop(); //mengambil data terakhir array
-// nama.splice(0, 1);
-// nama.splice(1,3); //menghapus pilihan array sesuai index dan berapa elemen
-p[1].innerHTML = " " + nama;
-
-let abjad = ["a", "b", "c", "d", "e", "f","g"];
-p[2].innerHTML = abjad.slice(0,3); //slice abjad digunakan itu mengkeep elemen sesuai index
-
-let mapel=["ipa","ips","rpl"];
-
-console.log(nama.concat(mapel)); //concat digunakan untuk menggabungkan array
-// console.log(nama.concat("matematika","sejarah","pkn"));
-
-nama.forEach(function(a){
-    p[3].innerHTML += " " + a;
-}); 
-
-// nama.forEach((a) => {
-//     p[4].innerHTML += " " + a;
-// });
-
-// nilai.filter(function (a) {
-//     if (a.ipa > 80) {
-//         console.log(a);
-//     }
-// });
-
-// nilai.filter((a)=> (a.ipa > 80 && a.rpl > 80 ? console.log(a.nama) : null));
-
-let siswa = nilai.map(function (a) {
-    return a.nama;
-});
-
-// let siswa = nilai.map((a)=>[a.nama, a.ipa, a.ips]);
-
-console.log(siswa);
-
-mapel.sort();
-
-console.log(mapel);
-
-// let hasil= nilai.reduce(function (a,b) {
-//    return(a = a + b.ipa); 
-// },0);
-
-let hasil =  nilai.reduce((a,b)=> (a+= b.ips),0);
-
-console.log(hasil);
+console.log(localStorage.getItem("coba"));
+console.log(localStorage.getItem("tes"));
