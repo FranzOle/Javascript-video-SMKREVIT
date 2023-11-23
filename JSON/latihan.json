@@ -16,5 +16,14 @@
         "macam" : ["Avanza","Fortuner"],
         "stok" : false,
         "keterangan" : null
+    },
+    {
+        "idmenu" : 3,
+        "idkategori" : 1,
+        "menu" : "BMW",
+        "harga" : 3000000,
+        "macam" : ["Sedan","Crossover"],
+        "stok" : false,
+        "keterangan" : null
     }
 ]
