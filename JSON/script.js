@@ -1,29 +1,20 @@
-// Video 29 Fetch Data API
+// Video 30 Async Wait
 
 document.querySelector("#klik").addEventListener("click",tampil);
-function tampil() {
-  let url = "https://jsonplaceholder.typicode.com/todos"
-  fetch(url)
-    // .then(function (res) {
-    //   return res.json();
-    // });
-    .then(res => res.json())
-    // .then(function (data) {
-    //   console.log(data);
-    //   
-    // });
-    .then(data => {
-      //  console.log(data)
-        let out = "<ul>"
-        data.forEach(el => {
-          out += `<li>${el.title}</li>`
-          // console.log(el.title)
-         
-        });
-        out += "</ul>"
-        document.querySelector("#isi").innerHTML = out;
-      }
-    )
+
+async function tampil() {
+    const url = "https://jsonplaceholder.typicode.com/users";
+    
+    const res = await fetch(url);
   
-}
-}
+    const data = await res.json();
+  
+    let out = "<ul>"
+    data.forEach(element => {
+      console.log(element.name);
+      out += `<li>${element.name}</li>`
+    });
+    out += "</ul>"
+    document.querySelector("#isi").innerHTML = out;
+    
+  }
