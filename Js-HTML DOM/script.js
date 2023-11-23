@@ -1,13 +1,15 @@
-//Video 25 Local Storage
+//Video 26 Session Storage
 let p = document.querySelectorAll("p");
-localStorage.setItem("coba",100);
-localStorage.setItem("tes","saya belajar javascript");
-// localStorage.removeItem("coba");
-//  localStorage.clear();
 
-p[0].innerHTML = localStorage.getItem("coba");
-p[1].innerHTML = localStorage.getItem("tes");
-p[2].innerHTML = "Panjang Storage = " + localStorage.length;
+console.log(localStorage.getItem("belajar"));
 
-console.log(localStorage.getItem("coba"));
-console.log(localStorage.getItem("tes"));
+sessionStorage.setItem("coba",100);
+sessionStorage.setItem("panjang",500);
+p[0].innerHTML = sessionStorage.getItem("coba");
+p[1].innerHTML = sessionStorage.getItem("panjang");
+
+// sessionStorage.removeItem("coba");
+// sessionStorage.clear();
+
+console.log(sessionStorage.key(1));
+console.log(sessionStorage.length);
